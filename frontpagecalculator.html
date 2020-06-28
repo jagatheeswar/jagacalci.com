@@ -1,0 +1,153 @@
+<!doctype html>
+<html>
+<head>
+    <title>
+    calculator
+    </title>
+    <style>
+        body{
+            background-color:  coral;
+            margin: 0px 0px;
+            padding: 0px 0px 0px 0px;
+        }
+        div.container{
+            width: 950px;
+            height: 640px;
+            background-image:url(images/background.jpg);
+            background-size:cover;
+            background-repeat: no-repeat;
+            margin: 20px auto;
+            padding-top: 20px;
+        border-radius: 7px;
+        }
+        div.calculator{
+            height: 605px;
+            width: 721px;
+            margin: auto auto;
+            position: relative;
+            padding-top: 10px;
+            padding-left: 10px;
+            border-radius: 10px;
+            background-color: antiquewhite;        }
+        div.result{
+            width: 700px;
+            height: 150px;
+            background-color: antiquewhite;
+            padding: 0px 0px 0px 0px;
+        }
+        div.keypad{
+            width: 700px;
+            height: 375px;
+                background-color: antiquewhite;
+            border-top: 5px solid black;
+        }
+        div.history{
+            width: 700px;
+            height: 60px;
+            font-size: 20px;
+            margin: 0 0px;
+            background-color: antiquewhite;
+            position: relative;
+            top: -px;
+            text-align: right;
+            color: darkgray;
+            font-weight:lighter;
+        }
+        div.output{
+            width: 700px;
+            height: 95px;
+            background-color: antiquewhite;
+            margin: 0px 0px;
+            padding-bottom: 0px;
+            margin-bottom: 0px;
+            position: relative;
+            text-align: right;
+            font-size: 20px;
+            color:darkmagenta;
+            font-weight: bold;
+        }
+        button.number,button.operation{
+            width: 60px;
+            height: 60px;
+            margin: 25px;
+            float: left;
+            border-radius: 10px;
+            box-shadow: 10px;
+            background-color: red;
+            color: yellow;
+            font-size: 20px;
+            cursor:pointer;
+        }
+        button.operation{
+            background-color: skyblue;
+            color: darkblue;
+            box-shadow: 20px;
+            cursor: pointer;
+            font-size: 30px;
+        }
+        #multiplication{
+            font-size: 60px;
+        }
+        p#answer{
+            border: 2px solid red;
+            visibility: visible;
+            width: 200px;
+            
+        }
+        body{
+            background-color: antiquewhite;
+        }
+        input#num1{
+            background-color: aqua;
+        }
+        input#num2{
+            background-color: blueviolet;
+            color: yellow;
+        }
+        
+    </style>
+    
+    </head>
+    <body>
+    <div class="container">
+        <div class="calculator">
+        <div class="result">
+            <div class="history">
+            <p class="history-value" id="history-value">  </p>
+            <div class="output">
+                <p class="outputvalue" id="outvalue"> </p>
+                </div>     
+            </div>
+    </div>
+            <div class="keypad">
+        <button class="number" id="1">1</button>
+        <button class="number" id="2">2</button>
+        <button class="number" id="3">3</button>
+        <button class="number" id="4">4</button>
+        <button class="number" id="5">5</button>   <button class="number" id="6">6</button>
+        <button class="number" id="7">7</button>   <button class="number" id="8">8</button>
+        <button class="number" id="9">9</button>   <button class="number" id="0">0</button> 
+        <button class="operation" id="+">+</button>
+        <button class="operation" id="-">-</button> <button class="operation" id="*">*</button> <button class="operation" id="/">/</button> <button class="operation" id="allclear">AC</button> <button class="operation" id="backspace">C</button> <button class="operation" id="=">=</button>    <button class="operation" id="(">(</button> <button class="operation" id=")">)</button>
+            </div>
+     
+            
+        </div>
+        </div>
+    </body>
+    num 1 <input type="number" id="num1" ondrag="return false;" onpaste="return false;" >
+    <br><br><br>
+    num 2 <input type="number" id="num2" ondrag="return false;" onpaste="return false;">
+    <select id="opr">
+    <option>addition</option>
+        <option>sub</option>
+        <option>multiply</option>
+        <option>divide</option>
+    </select>
+    <br><br>
+ <p id="answer"></p>
+    <button onclick="calc();">calculate</button>
+    <script src="calculator.js">
+        
+    </script>
+</html>
